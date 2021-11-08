@@ -2,6 +2,7 @@ def tic_tac_toe():
     tabla = [1, 2, 3, 4, 5, 6, 7, 8, 9]
     castiguri = ((0, 1, 2), (3, 4, 5), (6, 7, 8), (0, 3, 6), (1, 4, 7), (2, 5, 8), (0, 4, 8), (2, 4, 6))
     end = False
+    ordine = [4, 0, 2, 6, 8, 1, 3, 5, 9]
 
     def status():
         print(tabla[0], tabla[1], tabla[2])
@@ -18,26 +19,11 @@ def tic_tac_toe():
             tabla[n] = "X"
 
     def calculator():
-        if tabla[4] != "X" and tabla[4] != "O":
-            tabla[4] = "O"
-        elif tabla[0] != "X" and tabla[0] != "O":
-            tabla[0] = "0"
-        elif tabla[2] != "X" and tabla[2] != "O":
-            tabla[2] = "0"
-        elif tabla[6] != "X" and tabla[6] != "O":
-            tabla[6] = "0"
-        elif tabla[8] != "X" and tabla[8] != "O":
-            tabla[8] = "0"
-        elif tabla[8] != "X" and tabla[8] != "O":
-            tabla[8] = "0"
-        elif tabla[1] != "X" and tabla[1] != "O":
-            tabla[1] = "0"
-        elif tabla[3] != "X" and tabla[3] != "O":
-            tabla[3] = "0"
-        elif tabla[5] != "X" and tabla[5] != "O":
-            tabla[5] = "0"
-        elif tabla[7] != "X" and tabla[7] != "O":
-            tabla[7] = "0"
+        for poz in ordine:
+            if tabla[poz] != "X" and tabla[poz] != "O":
+                tabla[poz] = "O"
+                break
+
 
     def alege():
         while True:
@@ -86,4 +72,4 @@ def tic_tac_toe():
         calculator()
 
 
-tic_tac_toe()
+tic_tac_toe() gi
